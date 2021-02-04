@@ -1,0 +1,13 @@
+# TO USE: add this to /home/pi/.nanorc and reboot your Pi
+
+# display line numbers in program
+set linenumbers
+
+# automatically indent things
+set autoindent
+
+# tab to 3 spaces
+set tabsize 3
+
+# make sure tabs are actually in terms of spaces
+set tabstospaces
