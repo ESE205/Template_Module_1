@@ -15,10 +15,10 @@ chown pi /home/pi/.bash_profile
 
 echo "Setting up PI to ping server on boot."
 
-echo "Enter the username you wish to use. No spaces allowed: "
+echo "Enter the username you wish to use. a-zA-Z, no punctuation or spaces allowed: "
 read username
 echo $username
-echo "Please enter the password for the server specified by the professor"
+echo "Please enter the password for the server specified by the professor: "
 read password
 
 echo "Creating the script to ping server with 30 second delay."
@@ -27,7 +27,7 @@ read -r -d '\n' fileout <<PING_CONFIG
 #!/bin/bash
 sleep 30
 ip=\$(hostname -I | cut -d' ' -f1)
-curl "http://feherhome.no-ip.biz:3000/ip-update/$password/$username/\$ip"
+curl "http://feherhome.no-ip.bizi/ipupdate.php?username=$username&password=$password&ip=\$ip"
 PING_CONFIG
 
 echo "$fileout" >> /usr/local/bin/ip_pinger.sh
