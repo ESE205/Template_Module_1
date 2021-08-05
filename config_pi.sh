@@ -27,7 +27,7 @@ read -r -d '\n' fileout <<PING_CONFIG
 #!/bin/bash
 sleep 30
 ip=\$(hostname -I | cut -d' ' -f1)
-curl "http://feherhome.no-ip.bizi/ipupdate.php?username=$username&password=$password&ip=\$ip"
+curl "http://feherhome.no-ip.biz/ipupdate.php?username=$username&password=$password&ipaddr=\$ip"
 PING_CONFIG
 
 echo "$fileout" >> /usr/local/bin/ip_pinger.sh
