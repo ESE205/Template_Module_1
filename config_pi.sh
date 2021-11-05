@@ -67,3 +67,6 @@ echo "$fileout" >> /var/spool/cron/crontabs/pi
 chmod 600 /var/spool/cron/crontabs/pi
 chown pi  /var/spool/cron/crontabs/pi
 chgrp crontab /var/spool/cron/crontabs/pi
+
+cp example_nanorc ../.nanorc
+chown pi  ../.nanorc
