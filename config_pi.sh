@@ -68,5 +68,5 @@ chmod 600 /var/spool/cron/crontabs/pi
 chown pi  /var/spool/cron/crontabs/pi
 chgrp crontab /var/spool/cron/crontabs/pi
 
-cp example_nanorc ../.nanorc
-chown pi  ../.nanorc
+cp example_nanorc /home/pi/.nanorc
+chown pi  /home/pi/.nanorc
