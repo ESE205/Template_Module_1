@@ -91,33 +91,35 @@ CONFIG_TXT
 
 echo "$fileout" >> /boot/config.txt
 
-# tac on some additions to the wpa_supplicant file
-read -r -d '\n' fileout <<WPA_SUPPLICANT
+# Students need to add other WiFi sites like home WiFi or parent's WiFi,
+# so this can't be in this config_pi.sh as we don't want the student's editting this file
+# Uncomment if you want to tac on some additions to the wpa_supplicant file
+#read -r -d '\n' fileout <<WPA_SUPPLICANT
 
-network={
- ssid="wustl-guest-2.0"
- scan_ssid=1
- key_mgmt=NONE
- priority=100
-}
+#network={
+# ssid="wustl-2.0"
+# scan_ssid=1
+# key_mgmt=NONE
+# priority=100
+#}
 
-network={
- ssid="gardencafe-5G"
- scan_ssid=1
- psk="gardencafe117"
-}
+#network={
+# ssid="gardencafe-5G"
+# scan_ssid=1
+# psk="gardencafe117"
+#}
 
-network={
- ssid="Maplewood Deli-2G"
- scan_ssid=1
- psk="Gratitude"
-}
+#network={
+# ssid="Maplewood Deli-2G"
+# scan_ssid=1
+# psk="Gratitude"
+#}
 
-network={
- ssid="Living Room"
- scan_ssid=1
- psk="Brownbutter32"
-}
-WPA_SUPPLICANT
+#network={
+# ssid="Living Room"
+# scan_ssid=1
+# psk="Brownbutter32"
+#}
+#WPA_SUPPLICANT
 
-echo "$fileout" >> /etc/wpa_supplicant/wpa_supplicant.conf
+#echo "$fileout" >> /etc/wpa_supplicant/wpa_supplicant.conf
