@@ -5,4 +5,5 @@ This module concerns setting up the Pi, learning basic bash syntax, and getting 
 ## Deliverables
 
 - hello.py
-- module1.py
+- program1.py
+- program2.py
