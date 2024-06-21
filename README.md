@@ -7,3 +7,4 @@ This module concerns setting up the Pi, learning basic bash syntax, and getting 
 - hello.py
 - program1.py
 - program2.py
+- postlab.(doc/txt)
