@@ -35,3 +35,24 @@ CONFIG_TXT
 
 echo "$fileout" >> /boot/config.txt
 
+# put in an entry for wustl-2.0 wifi
+cat >> /etc/NetworkManager/system-connections/wustl-2.0.nmconnection <<WIFITEXT
+[connection]
+id=wustl-2.0
+uuid=8dfaed5f-5154-4087-9a7c-b259b1d0a9a5
+type=wifi
+interface-name=wlan0
+
+[wifi]
+mode=infrastructure
+ssid=wustl-2.0
+
+[ipv4]
+method=auto
+
+[ipv6]
+addr-gen-mode=default
+method=auto
+
+[proxy]
+WIFITEXT
